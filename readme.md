@@ -1,4 +1,6 @@
-# duplicate_char.py
+# Algo-py
+
+## duplicate_char(text: string): -> boolean
 
 - Input
   - "1234567890-qwertyuiop[asdfghjklzxcvbnm,!@#$%^&\*()BbPOIUYTRE"
