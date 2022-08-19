@@ -6,12 +6,12 @@ This file consists of different implementations of a function that accepts an in
 """
 
 @timeit
-def dictDup(key):
-  strlen = len(key)
+def dictDup(text):
+  strlen = len(text)
   median = int(math.floor(strlen / 2))
   dupDict = {}
-  left = [key[s] for s in range(0, median)]
-  right = [key[s] for s in range(median, strlen)]
+  left = [text[s] for s in range(0, median)]
+  right = [text[s] for s in range(median, strlen)]
   for i in range(0, len(right)):
     if not left[i] in dupDict:
       dupDict[left[i]] = True
@@ -25,11 +25,11 @@ def dictDup(key):
   return False
 
 @timeit
-def isDuplicate(key):
-  strlen = len(key)
+def isDuplicate(text):
+  strlen = len(text)
   median = int(math.floor(strlen / 2))
-  left = [key[s] for s in range(0, median)]
-  right = [key[s] for s in range(median, strlen)]
+  left = [text[s] for s in range(0, median)]
+  right = [text[s] for s in range(median, strlen)]
   for i in range(0, len(right)):
     if i < len(left):
       for j in range(len(right)):
@@ -44,13 +44,13 @@ def isDuplicate(key):
   return False
 
 @timeit
-def selectD(key):
-  strlen = len(key)
+def selectD(text):
+  strlen = len(text)
   for i in range(0, strlen):
     for j in range(0, strlen):
       jshift = j + 1
       if jshift < strlen and not i == jshift:
-        if(key[i] == key[jshift]):
+        if(text[i] == text[jshift]):
           return True
   return False
 
